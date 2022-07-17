@@ -1,0 +1,35 @@
+.Card {
+  .Statement {
+    background: $color-background;
+    width: 950px;
+    height: 85px;
+    border-radius: 5px;
+    @include between;
+    padding-left: 38px;
+  }
+
+  .Answers {
+    background: $color-background-answers;
+    margin-left: 40px;
+    margin-bottom: 28px;
+    padding: 22px 26px;
+    border-radius: 5px;
+
+    .Individual-answer {
+      @include between;
+      margin: 15px 0;
+
+      section {
+        display: flex;
+        align-items: center;
+
+        .Color-answer {
+          width: 30px;
+          height: 30px;
+          background: #fff;
+          margin-right: 22px;
+        }
+      }
+    }
+  }
+}
