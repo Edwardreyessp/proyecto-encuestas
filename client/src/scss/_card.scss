@@ -1,4 +1,5 @@
 .Card {
+  margin-right: 20px;
   .Statement {
     background: $color-background;
     width: 950px;
@@ -6,6 +7,22 @@
     border-radius: 5px;
     @include between;
     padding-left: 38px;
+    cursor: pointer;
+  }
+
+  .Statement-no-answers {
+    background: $color-background;
+    width: 950px;
+    height: 85px;
+    border-radius: 5px;
+    @include between;
+    padding-left: 38px;
+    cursor: pointer;
+    margin-bottom: 28px;
+  }
+
+  .Hide-answers {
+    opacity: 0.8;
   }
 
   .Answers {
@@ -28,8 +45,11 @@
           height: 30px;
           background: #fff;
           margin-right: 22px;
+          cursor: pointer;
         }
       }
+
+      @import "./color-picker";
     }
   }
 }

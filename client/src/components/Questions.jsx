@@ -8,7 +8,7 @@ const Questions = () => {
     fetch("/questions")
       .then((res) => res.json())
       .then((data) => {
-        setData(data.questions);
+        setData(data);
       });
   }, []);
 
@@ -18,9 +18,9 @@ const Questions = () => {
         {typeof data === "undefined" ? (
           <p>Loading...</p>
         ) : (
-          data.map((question, i) => {
+          Object.values(data).map((question, index) => {
             return (
-              <section key={i}>
+              <section key={index}>
                 <Card
                   enunciado={question.enunciado}
                   respuestas={question.respuestas}
@@ -53,3 +53,14 @@ const Questions = () => {
 };
 
 export default Questions;
+
+/* data.map((question, i) => {
+            return (
+              <section key={i}>
+                <Card
+                  enunciado={question.enunciado}
+                  respuestas={question.respuestas}
+                />
+              </section>
+            );
+          }) */
