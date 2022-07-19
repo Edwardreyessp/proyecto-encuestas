@@ -2,13 +2,8 @@ import { useState } from "react";
 import Answers from "./Answers";
 
 const Card = ({ enunciado, respuestas }) => {
-  /* const question = {
-    enunciado: enunciado,
-    respuestas: respuestas,
-    color: "#fff",
-  }; */
-
   const [statement, setStatement] = useState(false);
+  const [currentID, setCurrentID] = useState("");
 
   const ClickStatement = () => {
     setStatement(!statement);
@@ -27,7 +22,12 @@ const Card = ({ enunciado, respuestas }) => {
           ? Object.values(respuestas).map((answer, index) => {
               return (
                 <div key={index}>
-                  <Answers answer={answer} />
+                  <Answers
+                    answer={answer}
+                    id={Object.keys(respuestas)[index]}
+                    currentID={currentID}
+                    setCurrentID={setCurrentID}
+                  />
                 </div>
               );
             })
