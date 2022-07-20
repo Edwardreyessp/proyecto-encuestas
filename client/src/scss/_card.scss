@@ -36,6 +36,10 @@
       @include between;
       margin: 15px 0;
 
+      span {
+        cursor: pointer;
+      }
+
       section {
         display: flex;
         align-items: center;
@@ -54,6 +58,10 @@
 
     .edit-answer {
       @include between;
+
+      span {
+        cursor: pointer;
+      }
 
       input {
         height: 30px;
